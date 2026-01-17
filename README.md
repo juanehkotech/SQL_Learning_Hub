@@ -9,7 +9,7 @@ Cada subdirectorio representa un proyecto de base de datos independiente y funci
 -   **Datos de Prueba:** Conjuntos de datos realistas para poblar las tablas.
 -   **Ejercicios Resueltos:** Una progresión de ejercicios de SQL, desde consultas básicas hasta `JOIN`s, `GROUP BY`, subconsultas y DDL/DML, que permiten interactuar y manipular los datos del proyecto.
 
-Ideal para estudiantes de ASIR, desarrolladores que buscan mejorar sus habilidades en SQL, o cualquiera interesado en la aplicación práctica de conceptos de bases de datos.
+Ideal para estudiantes de IT, desarrolladores que buscan mejorar sus habilidades en SQL, o cualquiera interesado en la aplicación práctica de conceptos de bases de datos.
 
 ---
 
