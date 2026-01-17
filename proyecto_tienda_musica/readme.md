@@ -1,110 +1,108 @@
-# Proyecto: Base de Datos para Tienda de Musica Online
+## Descripci贸n del Proyecto
 
-## Descripción del Proyecto
+Este repositorio contiene el dise?o y la implementaci贸n de una base de datos relacional para una tienda de m煤sica online. El objetivo es proporcionar un entorno de aprendizaje pr谩ctico para SQL, cubriendo desde la creaci贸n de tablas hasta consultas complejas, as铆 como servir de ejemplo para el dise?o de bases de datos.
 
-Este repositorio contiene el dise?o y la implementación de una base de datos relacional para una tienda de música online. El objetivo es proporcionar un entorno de aprendizaje práctico para SQL, cubriendo desde la creación de tablas hasta consultas complejas, así como servir de ejemplo para el dise?o de bases de datos.
+La base de datos permitir谩 gestionar informaci贸n sobre artistas, 谩lbumes, canciones, g茅neros, clientes y sus pedidos.
 
-La base de datos permitirá gestionar información sobre artistas, álbumes, canciones, géneros, clientes y sus pedidos.
+## Dise?o Conceptual y L贸gico de la Base de Datos
 
-## Dise?o Conceptual y Lógico de la Base de Datos
-
-El dise?o de la base de datos se ha realizado siguiendo los principios de normalización para asegurar la integridad y eficiencia de los datos. Se han identificado las siguientes entidades principales y sus relaciones:
+El dise?o de la base de datos se ha realizado siguiendo los principios de normalizaci贸n para asegurar la integridad y eficiencia de los datos. Se han identificado las siguientes entidades principales y sus relaciones:
 
 ### Entidades y Atributos
 
-A continuación, se detalla cada entidad (que se convertirá en una tabla en la base de datos), sus atributos (columnas), y el rol de las claves primarias (PK) y foráneas (FK).
+A continuaci贸n, se detalla cada entidad (que se convertir谩 en una tabla en la base de datos), sus atributos (columnas), y el rol de las claves primarias (PK) y for谩neas (FK).
 
 #### 1. `Artista`
-*   **Descripción:** Almacena información sobre los artistas o bandas de música.
+*   **Descripci贸n:** Almacena informaci贸n sobre los artistas o bandas de m煤sica.
 *   **Atributos:**
-    *   `ArtistaID` (PK): Identificador único para cada artista.
+    *   `ArtistaID` (PK): Identificador 煤nico para cada artista.
     *   `Nombre`: Nombre del artista o banda.
     *   `Tipo`: Indica si el artista es un 'Solista' o una 'Banda/Grupo'.
-    *   `Nacionalidad`: País de origen del artista/banda.
+    *   `Nacionalidad`: Pa铆s de origen del artista/banda.
 
 #### 2. `Genero`
-*   **Descripción:** Contiene la lista de géneros musicales disponibles, asegurando la consistencia de los datos.
+*   **Descripci贸n:** Contiene la lista de g茅neros musicales disponibles, asegurando la consistencia de los datos.
 *   **Atributos:**
-    *   `GeneroID` (PK): Identificador único para cada género.
-    *   `NombreGenero`: Nombre del género musical (Ej: 'Rock', 'Pop', 'Jazz').
+    *   `GeneroID` (PK): Identificador 煤nico para cada g茅nero.
+    *   `NombreGenero`: Nombre del g茅nero musical (Ej: 'Rock', 'Pop', 'Jazz').
 
 #### 3. `Album`
-*   **Descripción:** Guarda los detalles de los álbumes y singles.
+*   **Descripci贸n:** Guarda los detalles de los 谩lbumes y singles.
 *   **Atributos:**
-    *   `AlbumID` (PK): Identificador único para cada álbum/single.
-    *   `Titulo`: Título del álbum o single.
-    *   `ArtistaID` (FK): Referencia al artista al que pertenece el álbum.
-    *   `GeneroID` (FK): Referencia al género musical del álbum.
-    *   `AnoLanzamiento`: A?o en que fue lanzado el álbum.
+    *   `AlbumID` (PK): Identificador 煤nico para cada 谩lbum/single.
+    *   `Titulo`: T铆tulo del 谩lbum o single.
+    *   `ArtistaID` (FK): Referencia al artista al que pertenece el 谩lbum.
+    *   `GeneroID` (FK): Referencia al g茅nero musical del 谩lbum.
+    *   `AnoLanzamiento`: A?o en que fue lanzado el 谩lbum.
     *   `TipoAlbum`: Indica si es un 'Album' o un 'Single'.
-    *   `Precio`: Precio de venta del álbum.
+    *   `Precio`: Precio de venta del 谩lbum.
 
 #### 4. `Cancion`
-*   **Descripción:** Almacena información sobre las canciones que forman parte de los álbumes.
+*   **Descripci贸n:** Almacena informaci贸n sobre las canciones que forman parte de los 谩lbumes.
 *   **Atributos:**
-    *   `CancionID` (PK): Identificador único para cada canción.
-    *   `Titulo`: Título de la canción.
-    *   `AlbumID` (FK): Referencia al álbum al que pertenece  la canción.
-    *   `Duracion`: Duración de la canción.
+    *   `CancionID` (PK): Identificador 煤nico para cada canci贸n.
+    *   `Titulo`: T铆tulo de la canci贸n.
+    *   `AlbumID` (FK): Referencia al 谩lbum al que pertenece  la canci贸n.
+    *   `Duracion`: Duraci贸n de la canci贸n.
     *   `Colaboracion`: Nombres de artistas colaboradores, si los hay (opcional).
 
 #### 5. `Cliente`
-*   **Descripción:** Contiene los datos de los usuarios que realizan compras en la tienda.
+*   **Descripci贸n:** Contiene los datos de los usuarios que realizan compras en la tienda.
 *   **Atributos:**
-    *   `ClienteID` (PK): Identificador único para cada cliente.
+    *   `ClienteID` (PK): Identificador 煤nico para cada cliente.
     *   `Nombre`: Nombre del cliente.
     *   `Apellido`: Apellido del cliente.
-    *   `Email`: Dirección de correo electrónico del cliente (debe ser única).
-    *   `Direccion`: Dirección postal del cliente.
+    *   `Email`: Direcci贸n de correo electr贸nico del cliente (debe ser 煤nica).
+    *   `Direccion`: Direcci贸n postal del cliente.
     *   `Ciudad`: Ciudad del cliente.
-    *   `Pais`: País del cliente.
+    *   `Pais`: Pa铆s del cliente.
     *   `FechaRegistro`: Fecha en que el cliente se registro.
 
 #### 6. `Pedido`
-*   **Descripción:** Registra la información general de cada compra realizada por los clientes.
+*   **Descripci贸n:** Registra la informaci贸n general de cada compra realizada por los clientes.
 *   **Atributos:**
-    *   `PedidoID` (PK): Identificador único para cada pedido.
-    *   `ClienteID` (FK): Referencia al cliente que realizó el pedido.
-    *   `FechaPedido`: Fecha y hora en que se realizó el pedido.
+    *   `PedidoID` (PK): Identificador 煤nico para cada pedido.
+    *   `ClienteID` (FK): Referencia al cliente que realiz贸 el pedido.
+    *   `FechaPedido`: Fecha y hora en que se realiz贸 el pedido.
     *   `Estado`: Estado actual del pedido (Ej: 'Pendiente', 'Enviado', 'Completado', 'Cancelado').
     *   `Total`: Costo total del pedido.
 
 #### 7. `DetallePedido`
-*   **Descripción:** Almacena los elementos específicos (álbumes) incluidos en cada pedido. Representa una línea de pedido.
+*   **Descripci贸n:** Almacena los elementos espec铆ficos (谩lbumes) incluidos en cada pedido. Representa una l铆nea de pedido.
 *   **Atributos:**
-    *   `DetalleID` (PK): Identificador único para cada línea de detalle del pedido.
+    *   `DetalleID` (PK): Identificador 煤nico para cada l铆nea de detalle del pedido.
     *   `PedidoID` (FK): Referencia al pedido al que pertenece este detalle.
-    *   `AlbumID` (FK): Referencia al álbum/single comprado en esta línea de pedido.
-    *   `Cantidad`: Cantidad de unidades de ese álbum/single compradas.
-    *   `PrecioUnitario`: Precio del álbum/single en el momento de la compra (para mantener un registro histórico).
+    *   `AlbumID` (FK): Referencia al 谩lbum/single comprado en esta l铆nea de pedido.
+    *   `Cantidad`: Cantidad de unidades de ese 谩lbum/single compradas.
+    *   `PrecioUnitario`: Precio del 谩lbum/single en el momento de la compra (para mantener un registro hist贸rico).
 
 ---
 
-## Diagrama Entidad-Relación (ERD)
+## Diagrama Entidad-Relaci贸n (ERD)
 
-![Diagrama Entidad-Relación de Tienda de Música](./err_tienda_musica.png)
+![Diagrama Entidad-Relaci贸n de Tienda de M煤sica](./err_tienda_musica.png)
 
-*Breve descripción de cómo leer el ERD: Las cajas representan tablas, las líneas representan relaciones (uno a muchos, uno a uno), y las PK/FK indican cómo se conectan las tablas.*
+*Breve descripci贸n de c贸mo leer el ERD: Las cajas representan tablas, las l铆neas representan relaciones (uno a muchos, uno a uno), y las PK/FK indican c贸mo se conectan las tablas.*
 
 ---
 
-## Configuración del Entorno (MySQL)
+## Configuraci贸n del Entorno (MySQL)
 
-Para trabajar con esta base de datos, necesitarás tener instalado MySQL.
+Para trabajar con esta base de datos, necesitar谩s tener instalado MySQL.
 
 ### Requisitos:
-*   MySQL Server (versión 8.0 o superior recomendada)
-*   Un cliente MySQL (como MySQL Workbench, DBeaver, o la línea de comandos de MySQL)
+*   MySQL Server (versi贸n 8.0 o superior recomendada)
+*   Un cliente MySQL (como MySQL Workbench, DBeaver, o la l铆nea de comandos de MySQL)
 
 ### Pasos para configurar:
-1.  Instalación de MySQL.
-2.  Creación de la base de datos `tienda_musica` a través de los scripts SQL para la creación de la propia base de datos e inserción de datos de ejemplo.
+1.  Instalaci贸n de MySQL.
+2.  Creaci贸n de la base de datos `tienda_musica` a trav茅s de los scripts SQL para la creaci贸n de la propia base de datos e inserci贸n de datos de ejemplo.
 
 ---
 
 ## Ejercicios y Consultas SQL
 
-Esta sección contendrá una serie de ejercicios prácticos de SQL, organizados por complejidad creciente, para interactuar con la base de datos de la tienda de música.
+Esta secci贸n contendr谩 una serie de ejercicios pr谩cticos de SQL, organizados por complejidad creciente, para interactuar con la base de datos de la tienda de m煤sica.
 
 *   `01_creacion_tablas.sql`
 *   `02_insercion_datos.sql`
@@ -113,10 +111,10 @@ Esta sección contendrá una serie de ejercicios prácticos de SQL, organizados 
 
 ---
 
-## Cómo Empezar
+## C贸mo Empezar
 
 1.  Clona este repositorio: `git clone https://github.com/juanehkotech/SQL_Learning_Hub.git`
-2.  Configura tu entorno MySQL (ver sección "Configuración del Entorno").
+2.  Configura tu entorno MySQL (ver secci贸n "Configuraci贸n del Entorno").
 3.  Ejecuta los scripts SQL en orden para crear la base de datos y cargar los datos.
 4.  Empieza a practicar con los ejercicios en la carpeta `exercises/`.
 
@@ -124,6 +122,4 @@ Esta sección contendrá una serie de ejercicios prácticos de SQL, organizados 
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas! Si tienes sugerencias para mejorar el dise?o, a?adir más ejercicios o corregir errores, por favor, abre un 'issue' o envía un 'pull request'.
-
----
+Las contribuciones son bienvenidas! Si tienes sugerencias para mejorar el dise?o, a?adir m谩s ejercicios o corregir errores, por favor, abre un 'issue' o env铆a un 'pull request'.
