@@ -1,12 +1,12 @@
 ## Descripción del Proyecto
 
-Este repositorio contiene el dise?o y la implementación de una base de datos relacional para una tienda de música online. El objetivo es proporcionar un entorno de aprendizaje práctico para SQL, cubriendo desde la creación de tablas hasta consultas complejas, así como servir de ejemplo para el dise?o de bases de datos.
+Este repositorio contiene el diseño y la implementación de una base de datos relacional para una tienda de música online. El objetivo es proporcionar un entorno de aprendizaje práctico para SQL, cubriendo desde la creación de tablas hasta consultas complejas, así como servir de ejemplo para el diseño de bases de datos.
 
 La base de datos permitirá gestionar información sobre artistas, álbumes, canciones, géneros, clientes y sus pedidos.
 
-## Dise?o Conceptual y Lógico de la Base de Datos
+## Diseño Conceptual y Lógico de la Base de Datos
 
-El dise?o de la base de datos se ha realizado siguiendo los principios de normalización para asegurar la integridad y eficiencia de los datos. Se han identificado las siguientes entidades principales y sus relaciones:
+El diseño de la base de datos se ha realizado siguiendo los principios de normalización para asegurar la integridad y eficiencia de los datos. Se han identificado las siguientes entidades principales y sus relaciones:
 
 ### Entidades y Atributos
 
@@ -33,7 +33,7 @@ A continuación, se detalla cada entidad (que se convertirá en una tabla en la 
     *   `Titulo`: Título del álbum o single.
     *   `ArtistaID` (FK): Referencia al artista al que pertenece el álbum.
     *   `GeneroID` (FK): Referencia al género musical del álbum.
-    *   `AnoLanzamiento`: A?o en que fue lanzado el álbum.
+    *   `AnoLanzamiento`: Año en que fue lanzado el álbum.
     *   `TipoAlbum`: Indica si es un 'Album' o un 'Single'.
     *   `Precio`: Precio de venta del álbum.
 
@@ -122,4 +122,4 @@ Esta sección contendrá una serie de ejercicios prácticos de SQL, organizados 
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas! Si tienes sugerencias para mejorar el dise?o, a?adir más ejercicios o corregir errores, por favor, abre un 'issue' o envía un 'pull request'.
+Las contribuciones son bienvenidas! Si tienes sugerencias para mejorar el diseño, añadir más ejercicios o corregir errores, por favor, abre un 'issue' o envía un 'pull request'.
