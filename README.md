@@ -18,7 +18,7 @@ Ideal para estudiantes de IT, desarrolladores que buscan mejorar sus habilidades
 ### 1. 🎶 Tienda de Música Online
     - **Descripción:** Una base de datos para gestionar artistas, álbumes, canciones, géneros, clientes y sus pedidos. Perfecta para practicar consultas transaccionales y de agregación.
     - **Tecnología:** MySQL
-    - **Ver proyecto:** [Link a la carpeta `proyecto_tienda_musica`](./proyecto_tienda_musica)
+    - **Ver proyecto:** (https://github.com/juanehkotech/SQL_Learning_Hub/tree/main/proyecto_tienda_musica)
     
 ---
 
